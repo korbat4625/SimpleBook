@@ -1,0 +1,18 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+
+.transition-enter-active,
+.transition-leave-active {
+  transition: opacity 0.5s;
+}
+.transition-enter,
+.transition-leave-active {
+  opacity: 0;
+}
+.center-text {
+  color: $main-text-color
+}

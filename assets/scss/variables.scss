@@ -1,0 +1,31 @@
+$color-box: (
+    sky-blue: rgb(78, 192, 233),
+    sky-second-blue: rgb(95, 156, 236),
+    sky-green: rgb(74, 207, 174),
+    sky-yellow: rgb(255, 206, 82),
+    sky-red: rgb(237, 84, 100),
+    hot-pink: #FFAEBC,
+    tiffany-blue: #A0E7E5,
+    mint: #B4F8C8,
+    yellow:#FBE7C6
+);
+
+$sky-blue: map-get($map: $color-box, $key: sky-blue);
+$sky-second-blue: map-get($map: $color-box, $key: sky-second-blue);
+$sky-green: map-get($map: $color-box, $key: sky-green);
+$sky-yellow: map-get($map: $color-box, $key: sky-yellow);
+$sky-red: map-get($map: $color-box, $key: sky-red);
+
+$html-background: #303030;
+$sidebar-text-color: #dfdfdf;
+$sidebar-arrow-color: #00D084;
+$main-text-color: #cecece;
+
+@each $name, $color in $color-box {
+    .font-#{""+$name} {
+        color: $color
+    }
+    .bg-#{""+$name} {
+        background-color: $color;
+    }
+}
